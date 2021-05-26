@@ -1,0 +1,13 @@
+@page "/counter"
+@inject Blazored.LocalStorage.ISyncLocalStorageService localStorage
+
+
+@code {
+
+    protected override void OnInitialized()
+    {
+        localStorage.SetItem("name", "John Smith");
+        var name = localStorage.GetItem<string>("name");
+    }
+
+}
